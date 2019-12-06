@@ -20,6 +20,6 @@ These features include:
 
 Additional challenges for me were:
 
-- Soldering the DS1037 RTC module. It was a challenge, an easier method would have been to purchase a DS3231.
+- Soldering the DS1307 RTC module. It was a challenge, an easier method would have been to purchase a DS3231.
 - Power sources, how to maximize portability. 
 - Learning the uses of the I2C protocol and drawing the modules used in Fritzing (namely Serial Interface Board Module 1602).
