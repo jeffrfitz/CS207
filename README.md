@@ -17,6 +17,7 @@ These features include:
 - Turning off the alarm while ringing.
 - Preventing the device from being stuck on menu settings (if happened by accident).
 - Removing the LED to simplify build, as the LCD is proven to be bright enough by itself.
+- Adding EEPROM to save the alarm hours and minutes to be used even after power was lost rather than resetting to zero.
 
 Additional challenges for me were:
 
