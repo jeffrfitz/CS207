@@ -1,17 +1,18 @@
 /*
 
    This is revision 1.1 by Jeffrey Fitzpatrick
-   1.0 - Removes LED Functionality.
+   1.0 - Removes LED Functionality. 
    1.1 - Adds a second buzzer, this is a passive buzzer that will keep beeping throughout the menus.
          This is intended to movitate the user to close the menu so as to avoid the condition where
          an alarm is prevented due to the device being left in one of the menus (perhaps by accident).
 
          Minor changes include the renaming of variable so it'll be easier to comprehend.
 
-         The buzzer assignments need not be a passive or active, it just happens that they were 
-         available for use.
-   1.2 - Adds the ability to turn of the LCD in order to conserve battery life. The display will be
-         turned on automatically an hour prior to alarm.
+         The buzzer assignments need not be specifically a passive or active, it just happens that 
+         they were available for use.
+   1.2 - Adds the ability to turn off the LCD in order to conserve battery life. The display will be
+         turned on automatically an hour prior to alarm. As such, waking up earlier than the alarm
+         and seeing the LCD on will give you a good indication to get moving.
 */
 
 
@@ -42,6 +43,7 @@ int P1 = 6; // Button SET MENU'
 int P2 = 7; // Button +
 int P3 = 8; // Button -
 int P4 = 9; // SWITCH Alarm
+int P5 = 3; // LCD on/off
 
 //**************Alarm***************//
 
@@ -71,6 +73,7 @@ void setup()
   pinMode(P2, INPUT_PULLUP);
   pinMode(P3, INPUT_PULLUP);
   pinMode(P4, INPUT_PULLUP);
+  pinMode(P5, INPUT_PULLUP);
 
   pinMode(buzzer, OUTPUT); // Set buzzer as an output
   pinMode(buzzer2, OUTPUT);
@@ -115,7 +118,8 @@ void loop()
   // in which subroutine should we go?
   if (menu == 0)
   {
-    DisplayDateTime(); // void DisplayDateTime
+    DisplayDateTime(); // Display  DateTime
+    turnOff(); // 
     Alarm(); // Alarm control
   }
   if (menu == 1)
@@ -522,5 +526,6 @@ void buzz(int freq)
 
 void turnOff()
 {
+  while(
   lcd.backlight();
 }
