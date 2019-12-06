@@ -14,6 +14,7 @@ This project focuses on the construction and general improvement of the Alarm Cl
 These features include:
 
 - Turning off the LCD backlight.
+- Turning off the alarm while ringing.
 - Preventing the device from being stuck on menu settings (if happened by accident).
 - Removing the LED to simplify build, as the LCD is proven to be bright enough by itself.
 
