@@ -24,3 +24,13 @@ Additional challenges for me were:
 - Soldering the DS1307 RTC module. It was a challenge, an easier method would have been to purchase a DS3231.
 - Power sources, how to maximize portability. 
 - Learning the uses of the I2C protocol and drawing the modules used in Fritzing (namely Serial Interface Board Module 1602).
+
+
+# To Compile the Code you must import these libraries: 
+
+<p>
+- EEPROM.h by Arduino </br>
+- Wire.h by Arduino </br>
+- <a href = "https://github.com/adafruit/RTClib"> RTClib.h by adafruit </a> </br>
+- <a href = "https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library"> Arduino-LiquidCrystal-I2C-Library by fdebrabander </a>
+</p>
